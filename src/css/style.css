@@ -1,0 +1,444 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Regular.woff2") format("woff2"), url("./fonts/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  background-color: #1C1E53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  padding: 10px 0;
+}
+header > div > img[alt] {
+  font-family: Poppins sans-serif;
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+}
+header > div > div {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+header > div > div > nav > ul {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+header > div > div > nav > ul > li a {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 100;
+}
+header > div > div button {
+  padding: 15px 30px;
+  background-color: transparent;
+  border-radius: 60px;
+  border: solid rgb(197, 197, 197) 1px;
+  color: white;
+  font-weight: 900;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main > section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.below-header {
+  background-color: #1C1E53;
+}
+.below-header > div {
+  width: 85%;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.below-header > div > :nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #FFFFFF;
+}
+.below-header > div > :nth-child(1) > h1 {
+  font-size: 54px;
+  font-weight: 600;
+  width: 510px;
+}
+.below-header > div > :nth-child(1) > p {
+  width: 510px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.below-header > div > :nth-child(1) > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.below-header > div > :nth-child(1) > div > :nth-child(1) {
+  background-color: #FCD980;
+  color: #282938;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 35px;
+  border-radius: 40px;
+}
+.below-header > div > :nth-child(1) > div > :nth-child(2) {
+  display: flex;
+  gap: 1rem;
+  color: #FFFFFF;
+}
+
+.our-projects > div {
+  width: 85%;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+}
+.our-projects > div > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+.our-projects > div > :nth-child(1) > h2 {
+  color: #282938;
+  font-size: 48px;
+  font-weight: 600;
+}
+.our-projects > div > :nth-child(1) > a {
+  color: #282938;
+  font-size: 16px;
+  font-weight: 500;
+}
+.our-projects > div > :nth-child(2) {
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+}
+.our-projects > div > :nth-child(2) > :nth-child(1) {
+  background-image: url(../images/ourprojects1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  flex-grow: 1;
+}
+.our-projects > div > :nth-child(2) > :nth-child(1) > div {
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 60px 30px;
+  gap: 2rem;
+  height: 100%;
+  color: #FFFFFF;
+  background-image: linear-gradient(to bottom right, rgba(28, 30, 83, 0.4196078431), #1C1E53);
+  width: 45%;
+}
+.our-projects > div > :nth-child(2) > :nth-child(1) > div > h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.our-projects > div > :nth-child(2) > :nth-child(1) > div > p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.our-projects > div > :nth-child(2) > :nth-child(1) > div > a {
+  display: flex;
+  gap: 1rem;
+  color: #FCD980;
+}
+.our-projects > div > :nth-child(2) > :nth-child(1) > div > a span {
+  display: flex;
+}
+.our-projects > div > :nth-child(2) > :nth-child(1):hover > div {
+  visibility: visible;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(1) {
+  background-image: url(../images/ourprojects3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(1) > div {
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 60px 30px;
+  gap: 2rem;
+  height: 100%;
+  color: #FFFFFF;
+  background-image: linear-gradient(to bottom right, rgba(28, 30, 83, 0.4196078431), #1C1E53);
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(1) > div > h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(1) > div > a {
+  display: flex;
+  gap: 1rem;
+  color: #FCD980;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(1) > div > a span {
+  display: flex;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(1):hover > div {
+  visibility: visible;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(2) {
+  background-image: url(../images/ourprojects2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(2) > div {
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 60px 30px;
+  gap: 2rem;
+  height: 100%;
+  color: #FFFFFF;
+  background-image: linear-gradient(to bottom right, rgba(28, 30, 83, 0.4196078431), #1C1E53);
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(2) > div > h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(2) > div > a {
+  display: flex;
+  gap: 1rem;
+  color: #FCD980;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(2) > div > a span {
+  display: flex;
+}
+.our-projects > div > :nth-child(2) > :nth-child(2) > :nth-child(2):hover > div {
+  visibility: visible;
+}
+
+.features {
+  background-color: #F4F6FC;
+}
+.features > div {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  padding: 80px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.features > div > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.features > div > :nth-child(1) > h3 {
+  font-size: 16px;
+  color: #282938;
+}
+.features > div > :nth-child(1) > h2 {
+  width: 650px;
+  font-size: 48px;
+  font-weight: 600;
+}
+.features > div > :nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.features > div > :nth-child(2) div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  padding: 30px 40px;
+  width: calc(33.3333333333% - 1.4rem);
+}
+.features > div > :nth-child(2) div > img {
+  width: 35px;
+  height: 35px;
+}
+.features > div > :nth-child(2) div > h5 {
+  font-size: 24px;
+  color: #282938;
+}
+.features > div > :nth-child(2) div > p {
+  font-size: 16px;
+  color: #282938;
+}
+
+.wocsau > div {
+  display: flex;
+  width: 85%;
+  padding: 80px 0;
+  gap: 5rem;
+}
+.wocsau > div > :nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  color: #282938;
+  gap: 1rem;
+  width: 30%;
+}
+.wocsau > div > :nth-child(1) > h3 {
+  font-size: 38px;
+  font-weight: 600;
+}
+.wocsau > div > :nth-child(1) > p {
+  font-size: 16px;
+}
+.wocsau > div > :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 2rem;
+}
+.wocsau > div > :nth-child(2) > p {
+  font-size: 32px;
+}
+.wocsau > div > :nth-child(2) > div {
+  display: flex;
+  justify-content: space-between;
+}
+.wocsau > div > :nth-child(2) > div > :nth-child(1) {
+  display: flex;
+  gap: 1rem;
+  color: #282938;
+}
+.wocsau > div > :nth-child(2) > div > :nth-child(1) > div {
+  display: flex;
+  flex-direction: column;
+}
+.wocsau > div > :nth-child(2) > div > :nth-child(1) > div > b {
+  font-size: 18px;
+  width: 200px;
+}
+.wocsau > div > :nth-child(2) > div > :nth-child(1) > div > p {
+  font-size: 12px;
+}
+.wocsau > div > :nth-child(2) > div > :nth-child(2) {
+  display: flex;
+}
+.wocsau > div > :nth-child(2) > div > :nth-child(2) > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+}
+.wocsau > div > :nth-child(2) > div > :nth-child(2) > div:hover {
+  background-color: #5239FA;
+  cursor: pointer;
+  color: white;
+}
+
+footer {
+  background-color: #1C1E53;
+  display: flex;
+  justify-content: center;
+}
+footer > div {
+  width: 85%;
+  padding: 80px 0;
+  display: flex;
+  gap: 5rem;
+  justify-content: flex-start;
+  color: white;
+}
+footer > div > :nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 40%;
+}
+footer > div > :nth-child(1) > :nth-child(1) > p {
+  font-size: 16px;
+}
+footer > div > :nth-child(1) > :nth-child(2) {
+  display: flex;
+  background-color: #FCD980;
+  padding: 20px;
+  gap: 2rem;
+  color: #282938;
+}
+footer > div > :nth-child(1) > :nth-child(2) div {
+  display: flex;
+  flex-direction: column;
+}
+footer > div > :nth-child(1) > :nth-child(2) b {
+  font-size: 18px;
+  font-weight: 500;
+}
+footer > div > :nth-child(1) > :nth-child(2) a {
+  color: #282938;
+  font-size: 16px;
+}
+footer > div > :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 40%;
+}
+footer > div > :nth-child(2) > h3 {
+  font-size: 48px;
+  font-weight: 600;
+}
+footer > div > :nth-child(2) p {
+  font-size: 16px;
+}
+footer > div > :nth-child(2) ul {
+  display: flex;
+  gap: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

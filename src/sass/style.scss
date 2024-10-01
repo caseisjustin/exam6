@@ -1,0 +1,506 @@
+@font-face {
+        font-family: 'Poppins';
+        src: url('./fonts/Poppins-Regular.woff2') format('woff2'),
+                url('./fonts/Poppins-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+}
+
+@import 'primary-colors';
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+}
+
+a {
+        text-decoration: none;
+}
+
+ul {
+        list-style: none;
+}
+
+@mixin primaryDFAIC {
+        display: flex;
+        align-items: center;
+}
+
+header {
+        width: 100%;
+        background-color: $primary-hd-footer;
+        @include primaryDFAIC();
+        justify-content: center;
+
+        &>div {
+                @include primaryDFAIC();
+                justify-content: space-between;
+                width: 85%;
+                padding: 10px 0;
+
+                &>img[alt] {
+                        font-family: Poppins sans-serif;
+                        color: white;
+                        font-size: 22px;
+                        font-weight: 900;
+                }
+
+                &>div {
+                        @include primaryDFAIC();
+                        gap: 3rem;
+
+                        &>nav>ul {
+                                @include primaryDFAIC();
+                                gap: 3rem;
+
+                                &>li a {
+                                        color: #ffffff;
+                                        font-size: 16px;
+                                        font-weight: 100;
+                                }
+                        }
+
+                        & button {
+                                padding: 15px 30px;
+                                background-color: transparent;
+                                border-radius: 60px;
+                                border: solid rgb(197, 197, 197) 1px;
+                                color: white;
+                                font-weight: 900;
+                        }
+                }
+        }
+}
+
+main {
+        width: 100%;
+        @include primaryDFAIC();
+        flex-direction: column;
+
+        &>section {
+                @include primaryDFAIC();
+                justify-content: center;
+                width: 100%;
+        }
+}
+
+@mixin sec-w-p {
+        width: 85%;
+        padding: 80px 0;
+}
+
+.below-header {
+        background-color: $primary-hd-footer;
+
+        &>div {
+                @include sec-w-p();
+                @include primaryDFAIC();
+                justify-content: space-between;
+
+                >:nth-child(1) {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        color: #FFFFFF;
+
+                        >h1 {
+                                font-size: 54px;
+                                font-weight: 600;
+                                width: 510px;
+                        }
+
+                        >p {
+                                width: 510px;
+                                font-size: 16px;
+                                font-weight: 500;
+                        }
+
+                        >div {
+                                display: flex;
+                                align-items: center;
+                                gap: 2rem;
+
+                                >:nth-child(1) {
+                                        background-color: $primary-btn-contactcard;
+                                        color: $primary-txt-cl;
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        padding: 15px 35px;
+                                        border-radius: 40px;
+                                }
+
+                                >:nth-child(2) {
+                                        display: flex;
+                                        gap: 1rem;
+                                        color: #FFFFFF;
+                                }
+                        }
+                }
+        }
+}
+
+@mixin cardBeforeHover {
+        display: flex;
+        visibility: hidden;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+        padding: 60px 30px;
+        gap: 2rem;
+        height: 100%;
+        color: #FFFFFF;
+        background-image: linear-gradient(to bottom right, #1C1E536B, #1C1E53);
+}
+
+@mixin bgImgBase {
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+.our-projects {
+        >div {
+                @include sec-w-p();
+                display: flex;
+                flex-direction: column;
+
+                >:nth-child(1) {
+                        @include primaryDFAIC();
+                        width: 100%;
+                        justify-content: space-between;
+
+                        padding: 40px 0;
+
+                        >h2 {
+                                color: $primary-txt-cl;
+                                font-size: 48px;
+                                font-weight: 600;
+                        }
+
+                        >a {
+                                color: $primary-txt-cl;
+                                font-size: 16px;
+                                font-weight: 500;
+                        }
+                }
+
+                >:nth-child(2) {
+                        display: flex;
+                        height: 100%;
+                        gap: 1rem;
+
+                        >:nth-child(1) {
+                                background-image: url(../images/ourprojects1.png);
+                                @include bgImgBase();
+                                position: relative;
+                                flex-grow: 1;
+
+                                >div {
+                                        @include cardBeforeHover();
+                                        width: 45%;
+
+                                        >h4 {
+                                                font-size: 24px;
+                                                font-weight: 600;
+                                        }
+
+                                        >p {
+                                                font-size: 16px;
+                                                font-weight: 400;
+                                        }
+
+                                        >a {
+                                                display: flex;
+                                                gap: 1rem;
+                                                color: $primary-btn-contactcard;
+
+                                                span {
+                                                        display: flex;
+                                                }
+                                        }
+                                }
+                        }
+
+                        >:nth-child(1):hover>div {
+                                visibility: visible;
+                        }
+
+                        >:nth-child(2) {
+                                @include primaryDFAIC();
+                                flex-direction: column;
+                                gap: 2rem;
+                                height: 100%;
+
+                                >:nth-child(1) {
+                                        background-image: url(../images/ourprojects3.png);
+                                        @include bgImgBase();
+
+                                        >div {
+                                                @include cardBeforeHover();
+
+                                                >h4 {
+                                                        font-size: 24px;
+                                                        font-weight: 600;
+                                                }
+
+                                                >a {
+                                                        display: flex;
+                                                        gap: 1rem;
+                                                        color: $primary-btn-contactcard;
+
+                                                        span {
+                                                                display: flex;
+                                                        }
+                                                }
+                                        }
+                                }
+
+                                >:nth-child(1):hover>div {
+                                        visibility: visible;
+                                }
+
+                                >:nth-child(2) {
+                                        background-image: url(../images/ourprojects2.png);
+                                        @include bgImgBase();
+                                        transition: 0.2s;
+
+
+                                        >div {
+                                                @include cardBeforeHover();
+
+                                                >h4 {
+                                                        font-size: 24px;
+                                                        font-weight: 600;
+                                                }
+
+                                                >a {
+                                                        display: flex;
+                                                        gap: 1rem;
+                                                        color: $primary-btn-contactcard;
+
+                                                        span {
+                                                                display: flex;
+                                                        }
+                                                }
+
+                                        }
+                                }
+
+                                >:nth-child(2):hover>div {
+                                        visibility: visible;
+                                }
+                        }
+                }
+        }
+}
+
+.features{
+        background-color: $primary-bg-section;
+        >div{
+                @include primaryDFAIC();
+                @include sec-w-p();
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                >:nth-child(1){
+                        @include primaryDFAIC();
+                        text-align: center;
+                        flex-direction: column;
+
+                        >h3{
+                                font-size: 16px;
+                                color: $primary-txt-cl;
+                        }
+
+                        >h2{
+                                width: 650px;
+                                font-size: 48px;
+                                font-weight: 600;
+                        }
+                }
+
+                >:nth-child(2){
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 2rem;
+                        div {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1rem;
+                                background-color: white;
+                                padding: 30px 40px;
+                                width: calc(100% / 3 - 1.4rem);
+
+                                >img{
+                                        width: 35px;
+                                        height: 35px;
+                                }
+
+                                >h5{
+                                        font-size: 24px;
+                                        color: $primary-txt-cl;
+                                }
+
+                                >p{
+                                        font-size: 16px;
+                                        color: $primary-txt-cl;
+                                }
+                        }
+                }
+        }
+}
+
+.wocsau{
+        >div{
+                display: flex;
+                @include sec-w-p();
+                gap: 5rem;
+
+                >:nth-child(1){
+                        display: flex;
+                        flex-direction: column;
+                        color: $primary-txt-cl;
+                        gap: 1rem;
+                        width: 30%;
+                        
+                        >h3{
+                                font-size: 38px;
+                                font-weight: 600;
+                        }
+
+                        >p{
+                                font-size: 16px;
+                        }
+                }
+
+                >:nth-child(2){
+                        display: flex;
+                        flex-direction: column;
+                        width: 70%;
+                        gap: 2rem;
+
+                        >p{
+                                font-size: 32px;
+                        }
+
+                        >div{
+                                display: flex;
+                                justify-content: space-between;
+
+                                >:nth-child(1){
+                                        display: flex;
+                                        gap: 1rem;
+                                        color: $primary-txt-cl;
+
+                                        >div{
+                                                display: flex;
+                                                flex-direction: column;
+
+                                                >b{
+                                                        font-size: 18px;
+                                                        width: 200px;
+                                                }
+        
+                                                >p{
+                                                        font-size: 12px;
+                                                }
+                                        }
+                                }
+
+                                >:nth-child(2){
+                                        display: flex;
+
+                                        >div{
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                width: 60px;
+                                                height: 60px;
+                                                border-radius: 50%;
+                                                font-size: 30px;
+                                        }
+
+                                        >div:hover{
+                                                background-color: #5239FA;
+                                                cursor: pointer;
+                                                color: white;
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+footer{
+        background-color: $primary-hd-footer;
+        display: flex;
+        justify-content: center;
+        >div{
+                @include sec-w-p();
+                display: flex;
+                gap: 5rem;
+                justify-content: flex-start;
+                color: white;
+
+                >:nth-child(1){
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4rem;
+                        width: 40%;
+
+                        >:nth-child(1){
+                                >p{
+                                        font-size: 16px;
+                                }
+                        }
+                        
+                        >:nth-child(2){
+                                display: flex;
+                                background-color: $primary-btn-contactcard;
+                                padding: 20px;
+                                gap: 2rem;
+                                color: $primary-txt-cl;
+
+                                div{
+                                        display: flex;
+                                        flex-direction: column;
+                                }
+
+                                b{
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                }
+
+                                a{
+                                        color: $primary-txt-cl;
+                                        font-size: 16px;
+                                }
+                        }
+                }
+
+                >:nth-child(2){
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        width: 40%;
+
+                        >h3{
+                                font-size: 48px;
+                                font-weight: 600;
+                        }
+
+                        p{
+                                font-size: 16px;
+                        }
+
+                        ul{
+                                display: flex;
+                                gap: 2rem;
+                        }
+                }
+        }
+}
+
