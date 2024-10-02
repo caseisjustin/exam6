@@ -1,45 +1,61 @@
 <template>
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
-      <div class="w-full max-w-lg bg-white rounded-lg shadow-lg p-8">
-        <h2 class="text-2xl font-bold text-center mb-4">Contact Us</h2>
-        <p class="text-center text-gray-600 mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-        </p>
-        
-        <form @submit.prevent="submitForm">
+  <div class="min-h-screen flex items-center justify-center bg-gray-50">
+    <div class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-md">
+      <!-- Title -->
+      <h2 class="text-3xl font-bold text-center mb-4">Contact Us</h2>
+      <p class="text-center text-gray-500 mb-8">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+      </p>
+
+      <!-- Form -->
+      <form @submit.prevent="submitForm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Name -->
-          <div class="mb-4">
-            <label for="name" class="block text-gray-700 font-medium">Name</label>
-            <input 
-              type="text" 
-              id="name" 
-              v-model="name" 
+          <div>
+            <label for="name" class="block text-gray-600 font-medium">Name</label>
+            <input
+              type="text"
+              id="name"
+              v-model="name"
               placeholder="Enter your name"
-              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
               required
             />
           </div>
-  
+
           <!-- Email -->
-          <div class="mb-4">
-            <label for="email" class="block text-gray-700 font-medium">Email</label>
-            <input 
-              type="email" 
-              id="email" 
-              v-model="email" 
-              placeholder="Enter your email"
-              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+          <div>
+            <label for="email" class="block text-gray-600 font-medium">Email</label>
+            <input
+              type="email"
+              id="email"
+              v-model="email"
+              placeholder="Enter your Email"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
               required
             />
           </div>
-  
-          <!-- Subject -->
-          <div class="mb-4">
-            <label for="subject" class="block text-gray-700 font-medium">Subject</label>
-            <select 
-              id="subject" 
-              v-model="subject" 
-              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+
+          <!-- Subject 1 -->
+          <div>
+            <label for="subject1" class="block text-gray-600 font-medium">Subject</label>
+            <input
+              type="text"
+              id="subject1"
+              v-model="subject1"
+              placeholder="Provide context"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+              required
+            />
+          </div>
+
+          <!-- Subject 2 -->
+          <div>
+            <label for="subject2" class="block text-gray-600 font-medium">Subject</label>
+            <select
+              id="subject2"
+              v-model="subject2"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
               required
             >
               <option disabled value="">Select Subject</option>
@@ -48,54 +64,55 @@
               <option>Feedback</option>
             </select>
           </div>
-  
-          <!-- Message -->
-          <div class="mb-6">
-            <label for="message" class="block text-gray-700 font-medium">Message</label>
-            <textarea 
-              id="message" 
-              v-model="message" 
-              rows="4"
-              placeholder="Write your question here"
-              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
-              required
-            ></textarea>
-          </div>
-  
-          <!-- Submit Button -->
-          <div class="text-center">
-            <button 
-              type="submit" 
-              class="w-full bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-            >
-              Send Message
-            </button>
-          </div>
-        </form>
-      </div>
+        </div>
+
+        <!-- Message -->
+        <div class="mt-6">
+          <label for="message" class="block text-gray-600 font-medium">Message</label>
+          <textarea
+            id="message"
+            v-model="message"
+            rows="5"
+            placeholder="Write your question here"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-6 text-center">
+          <button
+            type="submit"
+            class="bg-gray-800 text-white px-6 py-3 rounded-full hover:bg-gray-700 transition-colors duration-300"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      };
-    },
-    methods: {
-      submitForm() {
-        // Logic for handling form submission
-        console.log('Form submitted:', this.name, this.email, this.subject, this.message);
-      }
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      subject1: '',
+      subject2: '',
+      message: ''
+    };
+  },
+  methods: {
+    submitForm() {
+      // Handle form submission
+      console.log('Form submitted:', this.name, this.email, this.subject1, this.subject2, this.message);
     }
-  };
-  </script>
-  
-  <!-- Importing Tailwind CSS in your project -->
-  <style scoped>
-  </style>
-  
+  }
+};
+</script>
+
+<!-- Importing Tailwind CSS in your project -->
+<style scoped>
+</style>
