@@ -2,7 +2,7 @@
 </script>
 
 <template>
-
+  <contact-us/>
 </template>
 
 <style scoped>

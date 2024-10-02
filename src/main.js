@@ -1,6 +1,9 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
-import App from './App.vue'
 
-createApp(App).mount('#app')
+import App from './App.vue'
+import ContactUs from './components/ContactUs.vue'
+import './assets/tailwind.css';
+
+const app = createApp(App)
+app.component('contact-us', ContactUs)
+app.mount('#app')

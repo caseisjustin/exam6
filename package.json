@@ -9,15 +9,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vue/cli": "^5.0.8",
     "vue": "^3.4.29"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
+    "autoprefixer": "^10.4.20",
     "gulp": "^5.0.0",
     "gulp-purgecss": "^6.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglifycss": "^1.1.0",
+    "postcss": "^8.4.47",
     "sass": "^1.78.0",
+    "tailwindcss": "^3.4.13",
     "uglifycss": "^0.0.29",
     "vite": "^5.3.1"
   }
